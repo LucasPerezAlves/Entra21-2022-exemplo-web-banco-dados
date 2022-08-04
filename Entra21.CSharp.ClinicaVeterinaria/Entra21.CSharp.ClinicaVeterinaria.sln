@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.CSharp.ClinicaVeterinaria.Aplicacao", "Entra21.CSharp.ClinicaVeterinaria.Aplicacao\Entra21.CSharp.ClinicaVeterinaria.Aplicacao.csproj", "{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5940611F-C5D4-46C7-A656-B1CD4AFA6B9C}
+	EndGlobalSection
+EndGlobal
