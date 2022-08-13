@@ -5,7 +5,7 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Repositorio.BancoDados
 {
     public class ClinicaVeterinariaContexto : DbContext
     {
-        public DbSet<Raca> racas { get; set; }
+        public DbSet<Raca> Racas { get; set; }
 
         public ClinicaVeterinariaContexto(
             DbContextOptions<ClinicaVeterinariaContexto>options)
