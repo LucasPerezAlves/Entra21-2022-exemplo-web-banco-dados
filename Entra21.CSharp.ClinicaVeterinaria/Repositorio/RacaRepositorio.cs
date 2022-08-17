@@ -16,16 +16,18 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Repositorio
             var raca = _contexto.Racas.Where(x => x.Id == id).FirstOrDefault();
 
             _contexto.Racas.Remove(raca);
+            _contexto.SaveChanges();
         }
 
         public void Atualizar(Raca racaParaAlterar)
         {
             var raca = _contexto.Racas.Where(x => x.Id == racaParaAlterar.Id).FirstOrDefault();
 
-            raca.Nome = racaParaAlterar.Nome; 
+            raca.Nome = racaParaAlterar.Nome;
             raca.Especie = racaParaAlterar.Especie;
 
             _contexto.Update(raca);
+            _contexto.SaveChanges();
         }
 
         public void Cadastrar(Raca raca)
