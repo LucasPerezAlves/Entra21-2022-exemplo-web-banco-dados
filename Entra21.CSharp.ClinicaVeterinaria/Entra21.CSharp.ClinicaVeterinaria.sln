@@ -5,9 +5,15 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.CSharp.ClinicaVeterinaria.Aplicacao", "Entra21.CSharp.ClinicaVeterinaria.Aplicacao\Entra21.CSharp.ClinicaVeterinaria.Aplicacao.csproj", "{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico", "Servico\Servico.csproj", "{F5C319D1-98C0-4A24-A3EA-D4A8CF670FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servico", "Servico\Servico.csproj", "{F5C319D1-98C0-4A24-A3EA-D4A8CF670FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Repositorio\Repositorio.csproj", "{683B413A-7097-4B5C-B736-DFCF457538CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositorio", "Repositorio\Repositorio.csproj", "{683B413A-7097-4B5C-B736-DFCF457538CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Aplication", "00 - Aplication", "{0D13C3F1-E9FD-4AF6-98FD-AAAD0F0DF8B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Domain", "01 - Domain", "{2B931866-BC44-477C-A7E1-6A68D50D05B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Infra", "02 - Infra", "{EA150841-60B3-4871-9BE2-57650051745B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +36,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34C31B85-A495-4B6E-ADCF-4FC260E3FAF9} = {0D13C3F1-E9FD-4AF6-98FD-AAAD0F0DF8B7}
+		{F5C319D1-98C0-4A24-A3EA-D4A8CF670FAA} = {2B931866-BC44-477C-A7E1-6A68D50D05B2}
+		{683B413A-7097-4B5C-B736-DFCF457538CB} = {EA150841-60B3-4871-9BE2-57650051745B}
+		{2B931866-BC44-477C-A7E1-6A68D50D05B2} = {0D13C3F1-E9FD-4AF6-98FD-AAAD0F0DF8B7}
+		{EA150841-60B3-4871-9BE2-57650051745B} = {0D13C3F1-E9FD-4AF6-98FD-AAAD0F0DF8B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5940611F-C5D4-46C7-A656-B1CD4AFA6B9C}
