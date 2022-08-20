@@ -52,7 +52,6 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
         public IActionResult Cadastrar(
             [FromForm] RacaCadastrarViewModel racaCadastrar)
         {
-            //Valida o parâmetro recebido a Action se é valida
             //if(ModelState == false) = mesma coisa que colocar um exclamação no início
             if (!ModelState.IsValid)
             {
