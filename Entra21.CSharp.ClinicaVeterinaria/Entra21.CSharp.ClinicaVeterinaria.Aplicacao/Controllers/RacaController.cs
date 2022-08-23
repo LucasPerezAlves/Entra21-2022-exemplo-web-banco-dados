@@ -30,10 +30,8 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
         {
             var racas = _racaServico.ObterTodos();
 
-            //passar informação do C# para o HTML
-            ViewBag.Racas = racas;
 
-            return View("Index");
+            return View("Index", racas);
         }
 
         [HttpGet("/raca/cadastrar")]
@@ -45,7 +43,7 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
 
             var racaCadastrarViewModel = new RacaCadastrarViewModel();
 
-            return View();
+            return View(racaCadastrarViewModel);
         }
 
         [HttpPost("/raca/cadastrar")]
@@ -56,6 +54,8 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.Especies = ObterEspecies();
+
+                return View(racaCadastrar);
             }
             _racaServico.Cadastrar(racaCadastrar);
 
@@ -76,17 +76,27 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
         {
             var raca = _racaServico.ObterPorId(id);
             var especies = ObterEspecies();
+            var racaEditarViewModel = new RacaEditarViewModel()
+            {
+                Id = raca.Id,
+                Nome = raca.Nome,
+                Especie = raca.Especie
+            };
 
-            ViewBag.Raca = raca;
             ViewBag.Especies = especies;
 
-            return View("Editar");
+            return View(racaEditarViewModel);
         }
 
         [HttpPost("/raca/editar")]
         public IActionResult Editar(
             [FromForm] RacaEditarViewModel racaEditarViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Especies = ObterEspecies();
+                return View(racaEditarViewModel);
+            }
             _racaServico.Editar(racaEditarViewModel);
 
             return RedirectToAction("Index");
