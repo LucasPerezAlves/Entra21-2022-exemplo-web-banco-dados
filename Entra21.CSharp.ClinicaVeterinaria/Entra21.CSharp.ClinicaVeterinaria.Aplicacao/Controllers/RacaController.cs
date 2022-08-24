@@ -1,7 +1,7 @@
 ﻿using Entra21.CSharp.ClinicaVeterinaria.Repositorio.BancoDados;
 using Entra21.CSharp.ClinicaVeterinaria.Repositorio.Enums;
 using Entra21.CSharp.ClinicaVeterinaria.Servico;
-using Entra21.CSharp.ClinicaVeterinaria.Servico.ViewModels;
+using Entra21.CSharp.ClinicaVeterinaria.Servico.ViewModels.Racas;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
@@ -14,9 +14,9 @@ namespace Entra21.CSharp.ClinicaVeterinaria.Aplicacao.Controllers
 
         //Construtor: Objetivo construir o objeto de RacaController, com o minimo
         //necessários para o funcionamento correto
-        public RacaController(ClinicaVeterinariaContexto contexto)
+        public RacaController(IRacaServico racaServico)
         {
-            _racaServico = new RacaServico(contexto);
+            _racaServico = racaServico;
             //racaServico.Cadastrar(nome, especie);
         }
         /// <summary>
